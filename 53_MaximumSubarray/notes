@@ -1,24 +1,19 @@
-// Answer is still incorrect
 
 var maxSubArray = function(nums) {
+
+let max = -Infinity;
+let sum = 0;
     
-    let largeSum = 0;
-    
-    if (nums.length == 1) {
-        return nums[0];
-    } 
-     else {
-        for (let i = 0; i<nums.length; i++){
-            largeSum = nums[i];
-            for (let j = i+1; j<nums.length; j++){
-                let testSum = nums[i];
-                testSum += nums[j];
-                if (testSum > largeSum){
-                    largeSum = testSum;
-                }
-            }
-        } 
-        return largeSum;
+for (let i = 0; i < nums.length; i++){
+    if (sum < 0) {
+        sum = nums[i];
+    } else {
+        sum += nums[i];
     }
+    
+    if (sum > max) {
+        max = sum;
+    }
+    return max;
     
 };
