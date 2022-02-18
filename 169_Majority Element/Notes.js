@@ -1,4 +1,4 @@
-
+// Still incorrect
 
 var majorityElement = function(nums) {
     let newArr = [];
