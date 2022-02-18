@@ -1,22 +1,13 @@
 
+
 var majorityElement = function(nums) {
-    let valueACount = 1;
-    let valueA = nums[0];
-    let valueBCount = 0;
-    let valueB;
-    
-    for (let i = 1; i<nums.length; i++){
-        if (nums[i] == valueA){
-            valueACount++;
-        } else{
-            valueB = nums[i];
-            valueBCount++;
+    let newArr = [];
+    for (let i = 0; i<nums.length; i++){
+      newArr = nums.filter(x => x == nums[i]);
+        if (newArr.length > (nums.length)/2){
+            return nums[i]
+        } else {
+            newArr = [];
         }
-    } 
-    
-    if (valueACount > valueBCount){
-        return valueA;
-    } else {
-        return valueB;
     }
 };
