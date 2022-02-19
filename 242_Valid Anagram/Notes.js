@@ -1,9 +1,4 @@
 
-*
- * @param {string} s
- * @param {string} t
- * @return {boolean}
- */
 var isAnagram = function(s, t) {
     let newS = s.split('').sort();
     let newT = t.split('').sort();
@@ -33,7 +28,12 @@ var isAnagram = function(s, t) {
         
     }
     
-    if(objT === objS){
-       return true;
-    } else {return false;}
+    for (let k = 0; k < newS.length; k++){
+        if (objS[newS[k]] !== objT[newS[k]]){
+            return false;
+        }
+    }
+    return true;
+    
+    
 };
