@@ -1,24 +1,25 @@
-
-var isHappy = function(n) {
+var isHappy = function(n, count) {
     
-    let seen = {};
+    if(!count){
+        count = 0;
+    }
     
-    seen[n]=true;
+    if(n === 1){
+       return true;
+    }
     
-    while (true) {
-           
-        let arr = n.toString().split('');
-        
-        
-        arr.map(function(digit){return parseInt(digit)})
-        .reduce(function(total, digit){return total + digit*digit}, 0)
-        
-        if(seen[n] === 1){
-            return true;
-        } else if (seen[n]){
-            return false;
-        } else {
-            seen[n] = true;
-        }
-        }
+    if(count > 30){
+       return false;
+    }
+    
+    let newNum = n.toString()
+    .split('')
+    .map(function(digit){return parseInt(digit, 10)})
+    .reduce(function(total, digit){return total + digit*digit}, 0)
+    
+    count++;
+    
+    return isHappy(newNum, count);
+    
+    
 };
