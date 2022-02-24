@@ -3,12 +3,13 @@ var maxProfit = function(prices) {
     
     let minP = prices[0];
     let minInd = 0;
-    let maxP = prices[minInd];
+    let maxP = 0;
     
     for(let i = 1; i<prices.length; i++){
        if(prices[i]<minP){
            minP = prices[i];
            minInd = i;
+           maxP = prices[i];
        }
     }
     
@@ -20,8 +21,9 @@ var maxProfit = function(prices) {
     
     if(maxP == minP){
        return 0;
-    }else{
-        return (maxP - minP);
+    }else if(maxP > minP){
+        let profit = maxP - minP;
+        return profit;
     }
     
 };
