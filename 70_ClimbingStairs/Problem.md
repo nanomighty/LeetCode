@@ -6,7 +6,7 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 
  
 
-**Example 1:
+**Example 1:**
 
 Input: n = 2
 
@@ -17,7 +17,7 @@ Explanation: There are two ways to climb to the top.
 2. 2 steps
 
 
-**Example 2:
+**Example 2:**
 
 Input: n = 3
 
