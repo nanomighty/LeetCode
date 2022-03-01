@@ -1,8 +1,4 @@
-/**
- * @param {string} s
- * @param {string} t
- * @return {number}
- */
+
 var minSteps = function(s, t) {
     let sObj = {};
     let tObj = {};
@@ -12,7 +8,7 @@ var minSteps = function(s, t) {
     }
     
     for(let char of t){
-        if(sObj[char]) = sObj[char] - 1 || 1
+        if(sObj[char]){ sObj[char] -= 1}
     }
     
     for(let char of t){
@@ -20,7 +16,7 @@ var minSteps = function(s, t) {
     }
     
     for(let char of s){
-        tObj[char] = tObj[char] - 1 || 1
+        if(tObj[char]){ tObj[char] -= 1}
     }
     
     let sArray = Object.values(sObj);
