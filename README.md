@@ -1,3 +1,3 @@
 # LeetCode
 
-Me practice coding everyday!
+Practice coding everyday!
