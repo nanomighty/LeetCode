@@ -12,13 +12,14 @@ Return true if n is a happy number, and false if not.
  
 
 __Example 1:__
-
+```
 Input: n = 19
 
 Output: true
 
-Explanation:
-1^2 + 9^2 = 82
-8^2 + 2^2 = 68
-6^2 + 8^2 = 100
-1^2 + 0^2 + 0^2 = 1
+Explanation: 
+1^2 + 9^2 = 82 
+8^2 + 2^2 = 68 
+6^2 + 8^2 = 100 
+1^2 + 0^2 + 0^2 = 1 
+```
